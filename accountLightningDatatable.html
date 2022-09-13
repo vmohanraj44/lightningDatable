@@ -1,0 +1,16 @@
+<template>    
+<lightning-card title="Contact Information" icon-name="standard:contact">   
+    <lightning-layout >
+        <lightning-layout-item padding="around-small" size="4">
+    <lightning-input variant="label-hidden" placeholder="Search Contact" label="Search Account" value={searchvalue} onchange={handleChange} type="search"></lightning-input>
+</lightning-layout-item>
+<lightning-layout-item padding="around-small" size="4">
+    <lightning-combobox name="AccountRecords" variant="label-hidden" placeholder="Select an Account" label="Account" value={AccountValue} options={options} onchange={handleAccountChange}></lightning-combobox>
+</lightning-layout-item>
+<lightning-layout-item padding="around-small" size="2" class="slds-text-align_right">
+    <lightning-button label="Add Contact" onclick={handleSelectedContact} variant="brand"></lightning-button>
+</lightning-layout-item>
+</lightning-layout><br/>
+    <lightning-datatable key-field="id" class="slds-table_header-fixed_container slds-scrollable_x slds-border_top" columns={columns} data={data} show-row-number-column></lightning-datatable>
+</lightning-card>
+</template>
